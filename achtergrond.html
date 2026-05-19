@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achtergrond Informatie | The Vibe Tribe</title>
+<meta name="description" content="De wetenschap achter vibro-akoestische therapie. Alles over laagfrequente trillingen, hersengolven, binaural beats, solfeggio-frequenties en het parasympathische zenuwstelsel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg-deep: #0e0b07; --bg-dark: #1a1309; --bg-card: #231a0e;
+  --bg-warm: #2e2212; --bg-cream: #faf6f0; --bg-light: #f5ede0;
+  --accent: #c8783c; --accent-light: #e8a870; --gold: #c9a252;
+  --gold-light: #e8c882; --text: #f0e6d4; --text-muted: #9e8c78;
+  --text-dark: #1a1309; --text-dark-muted: #6b5a48;
+  --border-warm: rgba(200,120,60,0.18);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--bg-deep); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 3rem; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to bottom, rgba(14,11,7,0.95) 0%, transparent 100%); backdrop-filter: blur(4px); }
+.nav-logo { font-family: 'Cormorant', serif; font-size: 1.4rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 0.55rem 1.5rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+.nav-cta:hover { background: var(--accent); color: var(--bg-deep); }
+
+.page-hero { min-height: 60vh; display: flex; align-items: flex-end; background: var(--bg-deep); padding: 0 3rem 5rem; position: relative; overflow: hidden; }
+.hero-glow { position: absolute; top: 40%; left: 40%; transform: translate(-50%,-50%); width: 900px; height: 600px; background: radial-gradient(ellipse, rgba(200,120,60,0.05) 0%, transparent 70%); pointer-events: none; }
+.page-hero-content { position: relative; z-index: 2; max-width: 820px; animation: fadeUp 0.9s ease both; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+.breadcrumb { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 0.6rem; opacity: 0.4; }
+.page-label { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.page-title { font-family: 'Cormorant', serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 400; line-height: 1.05; color: var(--text); margin-bottom: 1.25rem; }
+.page-title em { font-style: italic; color: var(--accent-light); }
+.page-subtitle { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; line-height: 1.8; }
+
+.quick-nav { background: var(--bg-dark); border-bottom: 1px solid var(--border-warm); }
+.quick-nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 3rem; display: flex; gap: 0; overflow-x: auto; }
+.quick-nav-inner::-webkit-scrollbar { display: none; }
+.qn-item { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; padding: 1.25rem 1.5rem; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.3s; }
+.qn-item:hover { color: var(--text); border-bottom-color: var(--accent); }
+
+.divider { height: 1px; background: linear-gradient(to right, transparent, var(--border-warm), transparent); }
+.section { max-width: 1100px; margin: 0 auto; padding: 6rem 3rem; }
+.section-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.section-title { font-family: 'Cormorant', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--text); margin-bottom: 1.75rem; line-height: 1.2; }
+.section-title em { font-style: italic; color: var(--accent-light); }
+.body-text { font-size: 0.97rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.25rem; }
+.body-text:last-of-type { margin-bottom: 0; }
+
+/* PULL QUOTE */
+.pull-quote { border-left: 3px solid var(--accent); padding: 1.5rem 2rem; margin: 2.5rem 0; background: var(--bg-card); }
+.pull-quote p { font-family: 'Cormorant', serif; font-size: 1.4rem; font-style: italic; color: var(--text); line-height: 1.5; font-weight: 400; }
+.pull-quote cite { display: block; font-family: 'Jost', sans-serif; font-style: normal; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-top: 0.75rem; }
+
+/* TWO COL */
+.two-col { display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem; align-items: start; }
+.two-col-equal { grid-template-columns: 1fr 1fr; }
+
+/* STAT CARDS */
+.stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-warm); border: 1px solid var(--border-warm); margin-top: 2.5rem; }
+.stat-item { background: var(--bg-card); padding: 2.5rem 2rem; text-align: center; }
+.stat-number { font-family: 'Cormorant', serif; font-size: 3.5rem; font-weight: 300; color: var(--accent-light); line-height: 1; margin-bottom: 0.5rem; }
+.stat-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); margin-bottom: 0.4rem; }
+.stat-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+/* NERVOUS SYSTEM */
+.ns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+.ns-card { padding: 2rem; border: 1px solid var(--border-warm); }
+.ns-card.active-state { border-color: rgba(200,80,80,0.3); background: rgba(200,80,80,0.04); }
+.ns-card.rest-state { border-color: rgba(80,160,120,0.3); background: rgba(80,160,120,0.04); }
+.ns-card-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.ns-card.active-state .ns-card-label { color: rgba(220,120,100,0.8); }
+.ns-card.rest-state .ns-card-label { color: rgba(100,180,140,0.9); }
+.ns-card-title { font-family: 'Cormorant', serif; font-size: 1.3rem; font-weight: 500; color: var(--text); margin-bottom: 1rem; }
+.ns-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.ns-list li { font-size: 0.83rem; color: var(--text-muted); padding-left: 1.2rem; position: relative; }
+.ns-list li::before { content: '·'; position: absolute; left: 0.3rem; color: var(--text-muted); }
+.ns-arrow { text-align: center; padding: 1.5rem 0; font-family: 'Cormorant', serif; font-size: 1.1rem; color: var(--accent); letter-spacing: 0.05em; grid-column: 1 / -1; }
+
+/* BRAINWAVE TABLE */
+.bw-table { width: 100%; border-collapse: collapse; margin-top: 2.5rem; }
+.bw-table th { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); text-align: left; padding: 0.75rem 1.25rem; border-bottom: 1px solid var(--border-warm); font-weight: 400; }
+.bw-table td { padding: 1.25rem; border-bottom: 1px solid var(--border-warm); vertical-align: top; font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+.bw-table tr:last-child td { border-bottom: none; }
+.bw-table td:first-child { font-family: 'Cormorant', serif; font-size: 1.4rem; color: var(--accent-light); white-space: nowrap; }
+.bw-table td:nth-child(2) { color: var(--text); font-size: 0.9rem; min-width: 100px; }
+.bw-table td:nth-child(3) { color: var(--gold); font-size: 0.8rem; min-width: 100px; }
+.bw-table .session-pill { display: inline-block; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--border-warm); color: var(--text-muted); padding: 0.15rem 0.5rem; margin: 0.15rem 0.15rem 0.15rem 0; }
+.bw-table .session-pill.highlight { border-color: rgba(200,120,60,0.4); color: var(--accent-light); }
+
+/* SOLFEGGIO */
+.solfeggio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+.solf-item { background: var(--bg-card); border: 1px solid var(--border-warm); padding: 1.75rem; text-align: center; }
+.solf-hz { font-family: 'Cormorant', serif; font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 0.4rem; }
+.solf-name { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); margin-bottom: 0.6rem; }
+.solf-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+
+/* 40HZ SPECIAL */
+.hz40-section { background: var(--bg-warm); }
+.hz40-inner { max-width: 1100px; margin: 0 auto; padding: 6rem 3rem; }
+.hz40-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.hz40-item { display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.5rem; background: var(--bg-dark); border: 1px solid var(--border-warm); }
+.hz40-icon { font-family: 'Cormorant', serif; font-size: 1.8rem; color: var(--accent); min-width: 2.5rem; line-height: 1; }
+.hz40-text strong { display: block; color: var(--text); font-weight: 400; font-size: 0.9rem; margin-bottom: 0.25rem; }
+.hz40-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+/* RESEARCH */
+.research-bg { background: var(--bg-cream); }
+.research-bg .section-title { color: var(--text-dark); }
+.research-bg .section-label { color: var(--accent); }
+.research-bg .body-text { color: var(--text-dark-muted); }
+.research-bg .pull-quote { background: rgba(0,0,0,0.04); border-left-color: var(--accent); }
+.research-bg .pull-quote p { color: var(--text-dark); }
+.research-bg .pull-quote cite { color: var(--accent); }
+.ref-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.ref-item { font-size: 0.83rem; color: var(--text-dark-muted); line-height: 1.7; padding-left: 2rem; position: relative; border-left: 2px solid rgba(200,120,60,0.2); padding-left: 1.25rem; }
+.ref-item strong { color: var(--text-dark); font-weight: 400; }
+
+/* CTA */
+.cta-strip { background: var(--accent); padding: 6rem 3rem; text-align: center; }
+.cta-title { font-family: 'Cormorant', serif; font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: #fff; margin-bottom: 1rem; line-height: 1.1; }
+.cta-sub { font-size: 0.95rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+.btn-white { background: #fff; color: var(--accent); padding: 1rem 2.5rem; border: none; font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; margin: 0 0.5rem; }
+.btn-white:hover { background: var(--bg-deep); color: #fff; }
+.btn-white-ghost { background: transparent; color: #fff; padding: 1rem 2.5rem; border: 1px solid rgba(255,255,255,0.5); font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; margin: 0 0.5rem; }
+.btn-white-ghost:hover { border-color: #fff; }
+
+footer { background: var(--bg-deep); border-top: 1px solid var(--border-warm); padding: 4rem 3rem 2.5rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+.footer-brand-name { font-family: 'Cormorant', serif; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+.footer-brand-name span { color: var(--accent); }
+.footer-tagline { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.25rem; }
+.footer-contact { font-size: 0.8rem; color: var(--text-muted); line-height: 1.9; }
+.footer-col-title { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links a { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--text); }
+.footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid var(--border-warm); }
+.footer-copy { font-size: 0.75rem; color: var(--text-muted); opacity: 0.6; }
+
+@media (max-width: 900px) {
+  nav { padding: 1.25rem 1.5rem; }
+  .nav-links { display: none; }
+  .page-hero { padding: 0 1.5rem 4rem; }
+  .section, .hz40-inner { padding: 4rem 1.5rem; }
+  .two-col, .two-col-equal { grid-template-columns: 1fr; gap: 3rem; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .ns-grid { grid-template-columns: 1fr; }
+  .solfeggio-grid { grid-template-columns: 1fr 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .bw-table { font-size: 0.8rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">The <span>Vibe</span> Tribe</a>
+  <ul class="nav-links">
+    <li><a href="uitleg.html">Hoe het werkt</a></li>
+    <li><a href="uitleg.html">Hoe het werkt</a></li>
+    <li><a href="index.html#sessies">Sessies</a></li>
+    <li><a href="index.html#over">Over ons</a></li>
+  </ul>
+  <a href="index.html#sessies" class="nav-cta">Boek een sessie</a>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-glow"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span>Achtergrond informatie
+    </div>
+    <p class="page-label">Wetenschap & achtergrond</p>
+    <h1 class="page-title">De kracht van<br><em>geluid & trilling</em></h1>
+    <p class="page-subtitle">Alles in het universum trilt. Geluid is één van de meest directe manieren om die trillingen te beïnvloeden — en daarmee je lichaam, zenuwstelsel en geest. Hier is de wetenschap erachter.</p>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<div class="quick-nav">
+  <div class="quick-nav-inner">
+    <a href="#geluid-en-trilling" class="qn-item">Geluid & trilling</a>
+    <a href="#zenuwstelsel" class="qn-item">Het zenuwstelsel</a>
+    <a href="#hersengolven" class="qn-item">Hersengolven</a>
+    <a href="#40hz" class="qn-item">40 Hz gamma</a>
+    <a href="#solfeggio" class="qn-item">Solfeggio-frequenties</a>
+    <a href="#onderzoek" class="qn-item">Onderzoek</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- GELUID EN TRILLING -->
+<div style="background: var(--bg-dark);" id="geluid-en-trilling">
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <p class="section-label">De basis</p>
+        <h2 class="section-title">Alles is<br><em>vibratie</em></h2>
+        <p class="body-text">Alles in het universum bestaat uit energie — en energie is altijd in beweging, altijd aan het trillen. Dit geldt voor sterrenstelsels en oceanen, maar ook voor jouw lichaam. Tot in de kleinste cellen bestaat alles uit vibraties.</p>
+        <p class="body-text">Geluid is één van de meest directe manieren om deze vibraties te beïnvloeden. Wanneer je lichaam wordt omhuld door specifieke, diepe geluidsgolven, resoneren je cellen mee. Deze trillingen dringen door tot in je zenuwstelsel en activeren direct het parasympathische zenuwstelsel — het systeem dat zorgt voor rust, herstel en balans.</p>
+        <p class="body-text">Laagfrequente trillingen — in het bereik van 20 tot 120 Hz — zijn bijzonder effectief omdat ze fysiek voelbaar zijn. Het is hetzelfde principe als staan naast een grote subwoofer op een festival: de basdreunen gaan letterlijk door je hele lichaam. Het VibeTribe Soundbed gebruikt dit principe gecontroleerd en therapeutisch.</p>
+
+        <div class="pull-quote">
+          <p>"Je lichaam herinnert zich hoe het voelt om veilig en vrij te zijn — en dat gevoel blijft nog lang na de sessie bij je."</p>
+          <cite>The Vibe Tribe</cite>
+        </div>
+      </div>
+      <div>
+        <div class="stat-grid" style="grid-template-columns: 1fr; gap: 1px;">
+          <div class="stat-item" style="text-align: left; padding: 2rem;">
+            <p style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Hoe werkt het?</p>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div style="display: flex; gap: 1.25rem;">
+                <span style="font-family: 'Cormorant', serif; font-size: 1.8rem; color: var(--accent); min-width: 2.5rem; line-height: 1.1;">1.</span>
+                <div>
+                  <strong style="color: var(--text); font-weight: 400; font-size: 0.88rem; display: block; margin-bottom: 0.2rem;">Transducers zetten geluid om in trilling</strong>
+                  <span style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Ingebouwde transducers in het Soundbed vertalen audiosignalen naar fysieke trillingen met een frequentie van 20–120 Hz.</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1.25rem;">
+                <span style="font-family: 'Cormorant', serif; font-size: 1.8rem; color: var(--accent); min-width: 2.5rem; line-height: 1.1;">2.</span>
+                <div>
+                  <strong style="color: var(--text); font-weight: 400; font-size: 0.88rem; display: block; margin-bottom: 0.2rem;">Trillingen dringen door in bot en weefsel</strong>
+                  <span style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Laagfrequente trillingen penetreren dieper dan massage of geluid alleen — ze bereiken spieren, organen en het zenuwstelsel direct.</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1.25rem;">
+                <span style="font-family: 'Cormorant', serif; font-size: 1.8rem; color: var(--accent); min-width: 2.5rem; line-height: 1.1;">3.</span>
+                <div>
+                  <strong style="color: var(--text); font-weight: 400; font-size: 0.88rem; display: block; margin-bottom: 0.2rem;">Binaural beats sturen hersengolven</strong>
+                  <span style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Via de koptelefoon worden twee iets verschillende tonen aangeboden — het brein creëert een derde virtuele toon die hersengolven naar de gewenste staat trekt.</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1.25rem;">
+                <span style="font-family: 'Cormorant', serif; font-size: 1.8rem; color: var(--accent); min-width: 2.5rem; line-height: 1.1;">4.</span>
+                <div>
+                  <strong style="color: var(--text); font-weight: 400; font-size: 0.88rem; display: block; margin-bottom: 0.2rem;">Parasympathisch zenuwstelsel activeert</strong>
+                  <span style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Het gecombineerde effect zet het lichaam in herstel-modus: cortisol daalt, hartritme vertraagt, spierspanning lost op.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ZENUWSTELSEL -->
+<div style="background: var(--bg-deep);" id="zenuwstelsel">
+  <div class="section">
+    <p class="section-label">Het zenuwstelsel</p>
+    <h2 class="section-title">Van fight-or-flight<br>naar <em>rust & herstel</em></h2>
+    <div class="two-col-equal two-col">
+      <div>
+        <p class="body-text">In een wereld vol stress, trauma en overprikkeling schieten veel mensen vast in een chronische fight, flight of freeze-toestand. Het autonome zenuwstelsel is continu in de aanval- of vluchtstand — ook als er objectief geen gevaar is.</p>
+        <p class="body-text">Dit heeft verstrekkende gevolgen: verhoogde cortisol en adrenalinespiegels, verhoogde bloeddruk, verminderde spijsvertering, slaapproblemen, een overactieve geest die maar niet tot rust komt. Het lichaam is letterlijk niet in staat te ontspannen.</p>
+        <p class="body-text">Vibro-akoestische therapie activeert direct het parasympathische zenuwstelsel — de tegenhanger van fight-or-flight. Niet via cognitie of bewuste inspanning, maar via directe fysieke resonantie. Het lichaam krijgt een signaal dat het veilig is om te ontspannen.</p>
+      </div>
+      <div>
+        <div class="ns-grid">
+          <div class="ns-card active-state">
+            <p class="ns-card-label">Sympathisch — fight or flight</p>
+            <h3 class="ns-card-title">Aanvals- en vluchtstand</h3>
+            <ul class="ns-list">
+              <li>Verhoogd cortisol & adrenaline</li>
+              <li>Sneller hartritme & ademhaling</li>
+              <li>Verhoogde spierspanning</li>
+              <li>Verminderd immuunsysteem</li>
+              <li>Slaapproblemen & piekeren</li>
+              <li>Verminderde spijsvertering</li>
+            </ul>
+          </div>
+          <div class="ns-card rest-state">
+            <p class="ns-card-label">Parasympathisch — rust & herstel</p>
+            <h3 class="ns-card-title">Herstel- en ruststand</h3>
+            <ul class="ns-list">
+              <li>Gedaald cortisol & ontspanning</li>
+              <li>Rustiger hartritme</li>
+              <li>Diepere, langzamere ademhaling</li>
+              <li>Herstel van immuunsysteem</li>
+              <li>Betere slaapkwaliteit</li>
+              <li>Optimale spijsvertering</li>
+            </ul>
+          </div>
+          <div class="ns-arrow">← Vibro-akoestische therapie activeert deze omschakeling →</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-grid" style="margin-top: 4rem;">
+      <div class="stat-item">
+        <div class="stat-number">22'</div>
+        <div class="stat-label">Minimale sessieduur</div>
+        <div class="stat-desc">Al na 22 minuten is er een meetbaar effect op cortisol en hartritme — aangetoond in klinisch onderzoek.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">40%</div>
+        <div class="stat-label">Stressreductie</div>
+        <div class="stat-desc">Gemiddelde gerapporteerde vermindering van stressgevoelens direct na een vibro-akoestische sessie.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">∞</div>
+        <div class="stat-label">Contra-indicaties</div>
+        <div class="stat-desc">Nul. Voor gezonde volwassenen is VAT volledig veilig, niet-invasief en zonder bijwerkingen.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- HERSENGOLVEN -->
+<div style="background: var(--bg-dark);" id="hersengolven">
+  <div class="section">
+    <p class="section-label">Hersengolven & binaural beats</p>
+    <h2 class="section-title">Je brein op de<br><em>juiste frequentie</em></h2>
+    <div class="two-col">
+      <div>
+        <p class="body-text">Je brein werkt met elektrische signalen die golven vormen — hersengolven. Elke bewustzijnsstaat heeft zijn eigen karakteristieke frequentie. Met binaural beats kun je deze hersengolven bewust beïnvloeden.</p>
+        <p class="body-text">Het principe: door twee iets verschillende tonen in elk oor te laten horen, creëert je brein een derde, virtuele toon — het verschil tussen die twee frequenties. Als je linkeroor 200 Hz hoort en je rechteroor 208 Hz, creëert je brein een virtuele toon van 8 Hz — en worden je hersengolven langzaam naar die alpha-frequentie getrokken.</p>
+        <p class="body-text">Dit heet 'brainwave entrainment' — een aantoonbaar, reproduceerbaar effect dat in tientallen studies is bevestigd. De Vibe Tribe combineert binaural beats altijd met de fysieke trillingen van het Soundbed, wat het effect aanzienlijk versterkt.</p>
+      </div>
+      <div>
+        <table class="bw-table">
+          <thead>
+            <tr>
+              <th>Golf</th>
+              <th>Frequentie</th>
+              <th>Staat</th>
+              <th>Onze sessies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>γ Gamma</td>
+              <td>30–100 Hz</td>
+              <td>Hoog-bewuste cognitie, geheugen, waakzaamheid</td>
+              <td><span class="session-pill highlight">40 Hz</span></td>
+            </tr>
+            <tr>
+              <td>β Beta</td>
+              <td>13–30 Hz</td>
+              <td>Actief en alert, maar ook stress en piekeren</td>
+              <td><span class="session-pill">Startpunt</span></td>
+            </tr>
+            <tr>
+              <td>α Alpha</td>
+              <td>8–13 Hz</td>
+              <td>Kalme focus, creativiteit, lichte ontspanning</td>
+              <td><span class="session-pill highlight">Focus</span><span class="session-pill highlight">Stress</span></td>
+            </tr>
+            <tr>
+              <td>θ Theta</td>
+              <td>4–8 Hz</td>
+              <td>Diepe meditatie, droomachtig, inspiratie</td>
+              <td><span class="session-pill highlight">Cosmic</span><span class="session-pill highlight">King's</span></td>
+            </tr>
+            <tr>
+              <td>δ Delta</td>
+              <td>0,5–4 Hz</td>
+              <td>Diepe herstellende slaap, regeneratie</td>
+              <td><span class="session-pill highlight">Stress</span><span class="session-pill highlight">Tailor</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 40HZ GAMMA -->
+<section class="hz40-section" id="40hz">
+  <div class="hz40-inner">
+    <p class="section-label">Bijzondere aandacht</p>
+    <h2 class="section-title">De <em>40 Hz gamma</em> frequentie</h2>
+    <div class="two-col">
+      <div>
+        <p class="body-text">40 Hertz verdient een aparte vermelding. Deze frequentie, die valt in het gamma-gebied van hersengolven, heeft de afgelopen jaren veel wetenschappelijke aandacht gekregen — niet in de laatste plaats vanwege veelbelovend onderzoek naar de relatie met Alzheimer en neurodegeneratieve aandoeningen.</p>
+        <p class="body-text">Stimulatie met 40 Hz — via geluid, licht of sensoriële impulsen — blijkt meerdere meetbare effecten te hebben op hersenstructuur en -functie. De MIT-onderzoeksgroep van Li-Huei Tsai publiceerde baanbrekend werk over 40 Hz gamma-stimulatie en de reductie van amyloïde plaques, een kenmerk van Alzheimer.</p>
+        <p class="body-text">Bij de Vibe Tribe bieden we een dedicated 40 Hz sessie aan die gebruikmaakt van zowel auditieve als vibratorische stimulatie op en rondom deze frequentie — voor cognitieve optimalisatie, preventie en mentale scherpte.</p>
+      </div>
+      <div>
+        <div class="hz40-list">
+          <div class="hz40-item">
+            <span class="hz40-icon">↓</span>
+            <div class="hz40-text"><strong>Vermindering amyloïde plaques</strong>40 Hz stimulatie reduceert Alzheimer-geassocieerde eiwitophopingen en beschermt tegen neuronverval — aangetoond in dierstudies (MIT, 2016–2023) en vroeg klinisch onderzoek.</div>
+          </div>
+          <div class="hz40-item">
+            <span class="hz40-icon">↑</span>
+            <div class="hz40-text"><strong>Verbeterd werkgeheugen</strong>Deelnemers die 40 Hz binaural beats hoorden presteerden meetbaar beter op geheugentaken en informatieverwerkingstests.</div>
+          </div>
+          <div class="hz40-item">
+            <span class="hz40-icon">↑</span>
+            <div class="hz40-text"><strong>Behoud van myeline</strong>Bescherming van de isolatielaag om zenuwbanen — cruciaal voor snelle communicatie tussen hersencellen en cognitieve functie op lange termijn.</div>
+          </div>
+          <div class="hz40-item">
+            <span class="hz40-icon">↑</span>
+            <div class="hz40-text"><strong>Neurale synchronisatie</strong>Betere afstemming tussen hersengebieden leidt tot helderder denken, meer mentale coherentie en betere integratie van zintuiglijke informatie.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SOLFEGGIO -->
+<div style="background: var(--bg-deep);" id="solfeggio">
+  <div class="section">
+    <p class="section-label">Heilige frequenties</p>
+    <h2 class="section-title">Solfeggio-<br><em>frequenties</em></h2>
+    <div class="two-col">
+      <div>
+        <p class="body-text">Naast binaural beats werken we ook met solfeggio-frequenties — een set van zes toonhoogten die al eeuwenlang worden gebruikt in religieuze muziek en helende rituelen, van gregoriaanse gezangen tot boeddhistische meditatiemuziek.</p>
+        <p class="body-text">Elk van de zes kernfrequenties wordt geassocieerd met een specifiek effect op het lichaam en de geest. Hoewel het wetenschappelijk bewijs voor solfeggio-frequenties minder uitgebreid is dan voor binaural beats, zijn er aanwijzingen dat deze tonen het zenuwstelsel en cellulaire processen kunnen beïnvloeden via resonantie.</p>
+        <p class="body-text">In onze sessies gebruiken we solfeggio-frequenties als onderdeel van de soundscapes — niet als primair therapeutisch instrument, maar als aanvulling die de diepte en kwaliteit van de ervaring verrijkt.</p>
+      </div>
+      <div>
+        <div class="solfeggio-grid">
+          <div class="solf-item">
+            <div class="solf-hz">174</div>
+            <div class="solf-name">Pijnverlichting</div>
+            <div class="solf-desc">De laagste solfeggio-frequentie, geassocieerd met vermindering van fysieke en emotionele pijn.</div>
+          </div>
+          <div class="solf-item">
+            <div class="solf-hz">285</div>
+            <div class="solf-name">Weefselherstel</div>
+            <div class="solf-desc">Geassocieerd met regeneratie van cellen en weefsels, en versterking van het immuunsysteem.</div>
+          </div>
+          <div class="solf-item">
+            <div class="solf-hz">396</div>
+            <div class="solf-name">Bevrijding</div>
+            <div class="solf-desc">Loslaten van angst, schuld en negatieve emoties. Grounding en veiligheid.</div>
+          </div>
+          <div class="solf-item">
+            <div class="solf-hz">528</div>
+            <div class="solf-name">Transformatie</div>
+            <div class="solf-desc">De 'liefdesfrequentie'. DNA-herstel, transformatie, wonderen — de meest bekende solfeggio.</div>
+          </div>
+          <div class="solf-item">
+            <div class="solf-hz">741</div>
+            <div class="solf-name">Expressie</div>
+            <div class="solf-desc">Zelexpressie, oplossen van problemen, reinigen van giftige invloeden.</div>
+          </div>
+          <div class="solf-item">
+            <div class="solf-hz">852</div>
+            <div class="solf-name">Intuïtie</div>
+            <div class="solf-desc">Terugkeer naar spirituele orde, versterking van intuïtie en innerlijk weten.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ONDERZOEK -->
+<section class="research-bg" id="onderzoek">
+  <div class="section">
+    <p class="section-label">Wetenschappelijk onderzoek</p>
+    <h2 class="section-title">Wat de wetenschap<br><em>zegt</em></h2>
+    <div class="two-col">
+      <div>
+        <p class="body-text">Vibro-akoestische therapie is geen alternatieve geneeswijze in de traditionele zin — het is een evidence-based modaliteit met een groeiend corpus aan peer-reviewed onderzoek. Hieronder een selectie van relevante bevindingen.</p>
+        <p class="body-text">Het onderzoeksveld is actief en groeit snel, met name door de toegenomen wetenschappelijke aandacht voor niet-farmacologische interventies bij stress, slaap en cognitieve achteruitgang. De Vibe Tribe volgt de literatuur actief en integreert nieuwe inzichten in haar sessie-ontwikkeling.</p>
+
+        <div class="pull-quote" style="margin-top: 2rem;">
+          <p>"Laagfrequente muzikale vibraties hebben een direct en meetbaar effect op het autonome zenuwstelsel — vergelijkbaar met dieptemassage, maar zonder fysiek contact."</p>
+          <cite>Saarikallio et al., Journal of Music Therapy, 2018</cite>
+        </div>
+      </div>
+      <div>
+        <ul class="ref-list">
+          <li class="ref-item"><strong>Stress & angst:</strong> Boyd-Brewer (2003) en Grocke & Wigram (2007) documenteerden significante reductie van angst en spanning na VAT-sessies van 20–30 minuten bij zowel klinische als niet-klinische populaties.</li>
+          <li class="ref-item"><strong>Pijn & spierspanning:</strong> Wigram (1996) toonde aan dat laagfrequente trillingen spierspanning verminderen en effectief zijn als aanvulling bij musculoskeletale klachten.</li>
+          <li class="ref-item"><strong>Slaap:</strong> Onderzoek bij Parkinson-patiënten (Skille & Wigram, 1995) liet verbeterde slaapkwaliteit zien na regelmatige VAT-behandeling — effecten die ook zijn gerepliceerd bij niet-klinische populaties.</li>
+          <li class="ref-item"><strong>40 Hz & Alzheimer:</strong> Iaccarino et al. (Nature, 2016) en vervolgstudies van het MIT Picower Institute toonden reductie van amyloïde plaques en verbetering van cognitieve functie door 40 Hz gamma-stimulatie.</li>
+          <li class="ref-item"><strong>Binaural beats & cognitie:</strong> Mehrabi et al. (2019) vonden verbeterd werkgeheugen en aandacht na blootstelling aan 40 Hz binaural beats in een gerandomiseerde gecontroleerde studie.</li>
+          <li class="ref-item"><strong>AD(H)D:</strong> Exploratory research (Soderlund et al., 2016) suggereert dat auditieve stimulatie met specifieke frequenties aandacht en taakprestaties verbetert bij mensen met aandachtsstoornissen.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <h2 class="cta-title">Ervaar het<br>zelf</h2>
+  <p class="cta-sub">Wetenschap is één ding. De ervaring zelf is een ander. Boek een sessie en ontdek wat vibro-akoestische therapie voor jou doet.</p>
+  <div>
+    <a href="index.html#sessies" class="btn-white">Bekijk sessies</a>
+    <a href="uitleg.html" class="btn-white-ghost">Hoe het werkt</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">The <span>Vibe</span> Tribe</div>
+      <p class="footer-tagline">Unieke vibro-akoestische sessies in Amsterdam. Wetenschappelijk onderbouwd, muzikaal doordacht.</p>
+      <div class="footer-contact">Atlantisplein · Amsterdam<br>info@thevibetribe.nl</div>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigatie</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="uitleg.html">Hoe het werkt</a></li>
+        <li><a href="achtergrond.html">Achtergrond info</a></li>
+        <li><a href="index.html#sessies">Sessies</a></li>
+        <li><a href="index.html#over">Over ons</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Info</p>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacybeleid</a></li>
+        <li><a href="voorwaarden.html">Algemene voorwaarden</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 The Vibe Tribe · Amsterdam</span>
+  </div>
+</footer>
+
+</body>
+</html>

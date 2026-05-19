@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duo Stress & Anxiety Relief | The Vibe Tribe</title>
+<meta name="description" content="Dezelfde diepe ontspanning als de solo-sessie — nu beleefd met z'n tweeën. Twee soundbeds, één programma, één moment van echte rust samen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg-deep: #0e0b07; --bg-dark: #1a1309; --bg-card: #231a0e;
+  --bg-warm: #2e2212; --bg-light: #f5ede0; --bg-cream: #faf6f0;
+  --accent: #c8783c; --accent-light: #e8a870; --gold: #c9a252;
+  --gold-light: #e8c882; --text: #f0e6d4; --text-muted: #9e8c78;
+  --text-dark: #1a1309; --text-dark-muted: #6b5a48;
+  --border-warm: rgba(200,120,60,0.18);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--bg-deep); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 3rem; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to bottom, rgba(14,11,7,0.95) 0%, transparent 100%); backdrop-filter: blur(4px); }
+.nav-logo { font-family: 'Cormorant', serif; font-size: 1.4rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 0.55rem 1.5rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+.nav-cta:hover { background: var(--accent); color: var(--bg-deep); }
+
+.session-hero { min-height: 65vh; display: flex; align-items: flex-end; background: var(--bg-deep); padding: 0 3rem 5rem; position: relative; overflow: hidden; }
+.hero-bg-rings { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; opacity: 0.12; pointer-events: none; }
+.hero-bg-ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 50%; border: 1px solid var(--accent); }
+.hero-content { position: relative; z-index: 2; max-width: 700px; animation: fadeUp 0.9s ease both; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+.breadcrumb { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 0.6rem; opacity: 0.4; }
+.session-tag-pill { display: inline-block; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,162,82,0.35); padding: 0.25rem 0.75rem; margin-bottom: 1.25rem; }
+.session-hero-name { font-family: 'Cormorant', serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 400; line-height: 1.05; color: var(--text); margin-bottom: 1rem; }
+.session-hero-tagline { font-family: 'Cormorant', serif; font-style: italic; font-size: 1.4rem; color: var(--accent-light); margin-bottom: 1.5rem; }
+.session-hero-desc { font-size: 1rem; color: var(--text-muted); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.8; }
+.hero-meta { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+.meta-price { font-family: 'Cormorant', serif; font-size: 2.5rem; font-weight: 400; color: var(--text); }
+.meta-price.custom-price { font-size: 1.4rem; color: var(--text-muted); }
+.meta-duration { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding-left: 2.5rem; border-left: 1px solid var(--border-warm); }
+.btn-book-hero { background: var(--accent); color: #fff; padding: 1rem 2.5rem; border: none; font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; }
+.btn-book-hero:hover { background: var(--accent-light); }
+.btn-duo-hero { background: transparent; color: var(--gold); padding: 1rem 2rem; border: 1px solid rgba(201,162,82,0.4); font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; }
+.btn-duo-hero:hover { border-color: var(--gold); background: rgba(201,162,82,0.08); }
+.divider { height: 1px; background: linear-gradient(to right, transparent, var(--border-warm), transparent); }
+
+.content-section { max-width: 1100px; margin: 0 auto; padding: 6rem 3rem; }
+.section-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.section-title { font-family: 'Cormorant', serif; font-size: clamp(1.8rem,3vw,2.5rem); font-weight: 400; color: var(--text); margin-bottom: 2rem; line-height: 1.2; }
+.section-title em { font-style: italic; color: var(--accent-light); }
+.desc-text p { font-size: 1rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.25rem; }
+.desc-text p:last-child { margin-bottom: 0; }
+
+.layout-two { display: grid; grid-template-columns: 1.4fr 1fr; gap: 6rem; align-items: start; }
+.expects-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+.expect-item { padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-warm); border-left: 3px solid var(--accent); }
+.expect-title { font-family: 'Cormorant', serif; font-size: 1.15rem; font-weight: 500; color: var(--text); margin-bottom: 0.4rem; }
+.expect-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+.for-section { background: var(--bg-warm); }
+.for-section .content-section { padding: 5rem 3rem; }
+.for-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin-top: 2rem; }
+.for-item { padding: 1.25rem 1.5rem; background: var(--bg-dark); border: 1px solid var(--border-warm); font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; padding-left: 2.5rem; position: relative; }
+.for-item::before { content: '—'; position: absolute; left: 1rem; color: var(--accent); }
+
+.cta-block { background: var(--bg-dark); border-top: 1px solid var(--border-warm); border-bottom: 1px solid var(--border-warm); }
+.cta-block .content-section { padding: 5rem 3rem; display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+.cta-text-title { font-family: 'Cormorant', serif; font-size: 2.2rem; font-weight: 400; color: var(--text); margin-bottom: 0.5rem; }
+.cta-text-sub { font-size: 0.9rem; color: var(--text-muted); max-width: 480px; }
+.cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+.related-section .content-section { padding: 5rem 3rem; }
+.related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 2.5rem; }
+.related-card { background: var(--bg-card); border: 1px solid var(--border-warm); padding: 1.5rem; text-decoration: none; transition: all 0.3s; display: block; }
+.related-card:hover { border-color: rgba(200,120,60,0.4); }
+.related-card-tag { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.related-card-name { font-family: 'Cormorant', serif; font-size: 1.2rem; font-weight: 500; color: var(--text); margin-bottom: 0.4rem; }
+.related-card-arrow { font-size: 0.75rem; color: var(--accent); margin-top: 1rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+footer { background: var(--bg-deep); border-top: 1px solid var(--border-warm); padding: 4rem 3rem 2.5rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+.footer-brand-name { font-family: 'Cormorant', serif; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+.footer-brand-name span { color: var(--accent); }
+.footer-tagline { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.25rem; }
+.footer-contact { font-size: 0.8rem; color: var(--text-muted); line-height: 1.9; }
+.footer-col-title { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links a { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--text); }
+.footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid var(--border-warm); }
+.footer-copy { font-size: 0.75rem; color: var(--text-muted); opacity: 0.6; }
+
+@media (max-width: 900px) {
+  nav { padding: 1.25rem 1.5rem; }
+  .nav-links { display: none; }
+  .session-hero { padding: 0 1.5rem 4rem; min-height: 80vh; }
+  .content-section { padding: 4rem 1.5rem; }
+  .layout-two { grid-template-columns: 1fr; gap: 3rem; }
+  .for-grid { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .cta-block .content-section { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">The <span>Vibe</span> Tribe</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#uitleg">Hoe het werkt</a></li>
+    <li><a href="../uitleg.html">Hoe het werkt</a></li>
+    <li><a href="../index.html#sessies">Sessies</a></li>
+    <li><a href="../achtergrond.html">Achtergrond</a></li>
+    <li><a href="../index.html#over">Over ons</a></li>
+  </ul>
+  <a href="../index.html#sessies" class="nav-cta">Alle sessies</a>
+</nav>
+
+<section class="session-hero">
+  <div class="hero-bg-rings"><div class="hero-bg-ring" style="width:150px;height:150px;"></div><div class="hero-bg-ring" style="width:280px;height:280px;"></div><div class="hero-bg-ring" style="width:420px;height:420px;"></div><div class="hero-bg-ring" style="width:560px;height:560px;"></div><div class="hero-bg-ring" style="width:700px;height:700px;"></div></div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span>/</span>
+      <a href="../index.html#sessies">Sessies</a><span>/</span>
+      Duo Stress & Anxiety Relief
+    </div>
+    <span class="session-tag-pill">Duo · Ontspanning</span>
+    <h1 class="session-hero-name">Duo Stress & Anxiety Relief</h1>
+    <p class="session-hero-tagline">Samen loslaten — op dezelfde golflengte</p>
+    <p class="session-hero-desc">Dezelfde diepe ontspanning als de solo-sessie — nu beleefd met z'n tweeën. Twee soundbeds, één programma, één moment van echte rust samen.</p>
+    <div class="hero-meta">
+      <span class="meta-price ">€60</span>
+      <span class="meta-duration">30 minuten · 2 personen</span>
+      <a href="https://cal.eu/vibetribe/duo-stress-anxiety-relief" class="btn-book-hero">Boek voor 2</a>
+      
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<div style="background: var(--bg-dark);">
+  <div class="content-section">
+    <div class="layout-two">
+      <div>
+        <p class="section-label">Over deze sessie</p>
+        <h2 class="section-title">Wat <em>gebeurt er</em>?</h2>
+        <div class="desc-text"><p>Dezelfde diepe ontspanning als de solo-sessie, maar nu voor twee. Met twee soundbeds in dezelfde ruimte beleven jullie exact hetzelfde programma — laagfrequente trillingen, geruststellende soundscapes en binaural beats die jullie zenuwstelsels tegelijk terugbrengen naar balans.</p>
+<p>Er hoeft geen woord gezegd te worden. Jullie liggen naast elkaar en gaan allebei op in dezelfde ervaring. Dat stille samen-zijn, waarbij je letterlijk op dezelfde frequentie trilt, is een bijzondere verbinding die moeilijk te beschrijven is.</p>
+<p>Na afloop is er tijd om de ervaring samen te delen — of gewoon stil te genieten van de rust die je samen gecreëerd hebt.</p></div>
+      </div>
+      <div>
+        <p class="section-label">Wat kun je verwachten?</p>
+        <div class="expects-grid"><div class="expect-item">
+  <div class="expect-title">Gedeelde reset</div>
+  <div class="expect-text">Jullie zenuwstelsels ontspannen synchroon — een zeldzame ervaring van echte afstemming.</div>
+</div><div class="expect-item">
+  <div class="expect-title">Stille verbinding</div>
+  <div class="expect-text">Samen in rust zijn, zonder woorden, met dezelfde klanken en trillingen als verbinding.</div>
+</div><div class="expect-item">
+  <div class="expect-title">Samen landen</div>
+  <div class="expect-text">Na afloop is er ruimte om samen de ervaring te verwerken of gewoon stil te genieten.</div>
+</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<section class="for-section">
+  <div class="content-section">
+    <p class="section-label">Geschikt voor</p>
+    <h2 class="section-title"><em>Perfect</em> voor jou als...</h2>
+    <div class="for-grid"><div class="for-item">Stellen die samen willen resetten en verbinden</div><div class="for-item">Vrienden of familie die iets unieks willen delen</div><div class="for-item">Collega's die een bijzondere team-reset zoeken</div><div class="for-item">Als cadeau voor iemand die je dierbaar is</div></div>
+  </div>
+</section>
+
+<section class="cta-block">
+  <div class="content-section">
+    <div>
+      <div class="cta-text-title">Klaar voor jouw sessie?</div>
+      <p class="cta-text-sub">Boek direct via onze agenda of neem contact op voor meer informatie.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="https://cal.eu/vibetribe/duo-stress-anxiety-relief" class="btn-book-hero">Boek voor 2</a>
+    </div>
+  </div>
+</section>
+
+<section class="related-section" style="background: var(--bg-deep);">
+  <div class="content-section">
+    <p class="section-label">Meer sessies</p>
+    <h2 class="section-title">Andere <em>ervaringen</em></h2>
+    <div class="related-grid">
+      <a href="stress-anxiety-relief.html" class="related-card">
+  <div class="related-card-tag">Ontspanning</div>
+  <div class="related-card-name">Stress & Anxiety Relief</div>
+  <div class="related-card-arrow">Bekijk sessie →</div>
+</a><a href="duo-cosmic-explorer.html" class="related-card">
+  <div class="related-card-tag">Duo · Beleving</div>
+  <div class="related-card-name">Duo Cosmic Explorer</div>
+  <div class="related-card-arrow">Bekijk sessie →</div>
+</a><a href="sound-bath.html" class="related-card">
+  <div class="related-card-tag">Live event</div>
+  <div class="related-card-name">Sound Bath</div>
+  <div class="related-card-arrow">Bekijk sessie →</div>
+</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">The <span>Vibe</span> Tribe</div>
+      <p class="footer-tagline">Unieke vibro-akoestische sessies in Amsterdam. Wetenschappelijk onderbouwd, muzikaal doordacht.</p>
+      <div class="footer-contact">Atlantisplein · Amsterdam<br>info@thevibetribe.nl</div>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigatie</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#uitleg">Hoe het werkt</a></li>
+        <li><a href="../index.html#sessies">Sessies</a></li>
+        <li><a href="../index.html#over">Over ons</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Info</p>
+      <ul class="footer-links">
+        <li><a href="../privacy.html">Privacybeleid</a></li>
+        <li><a href="../voorwaarden.html">Algemene voorwaarden</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 The Vibe Tribe · Amsterdam</span>
+  </div>
+</footer>
+
+</body>
+</html>

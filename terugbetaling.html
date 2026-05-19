@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terugbetaalbeleid | The Vibe Tribe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg-deep: #0e0b07; --bg-cream: #faf6f0; --accent: #c8783c; --gold: #c9a252; --text: #f0e6d4; --text-muted: #9e8c78; --text-dark: #1a1309; --text-dark-muted: #5a4a38; --border-warm: rgba(200,120,60,0.18); }
+body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--bg-cream); color: var(--text-dark); line-height: 1.7; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(14,11,7,0.97); backdrop-filter: blur(4px); }
+.nav-logo { font-family: 'Cormorant', serif; font-size: 1.4rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-back { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; }
+.nav-back:hover { color: var(--text); }
+.page-header { background: var(--bg-deep); padding: 10rem 3rem 5rem; }
+.page-header-inner { max-width: 760px; margin: 0 auto; }
+.page-label { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.page-title { font-family: 'Cormorant', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; color: var(--text); line-height: 1.1; margin-bottom: 1rem; }
+.page-meta { font-size: 0.8rem; color: var(--text-muted); }
+.doc-body { max-width: 760px; margin: 0 auto; padding: 5rem 3rem 6rem; }
+h2 { font-family: 'Cormorant', serif; font-size: 1.6rem; font-weight: 500; color: var(--text-dark); margin: 3rem 0 1rem; line-height: 1.2; }
+h2:first-child { margin-top: 0; }
+p { font-size: 0.95rem; color: var(--text-dark-muted); line-height: 1.85; margin-bottom: 1rem; }
+ul { margin: 0.75rem 0 1rem 1.5rem; }
+li { font-size: 0.95rem; color: var(--text-dark-muted); line-height: 1.8; margin-bottom: 0.3rem; }
+a { color: var(--accent); }
+.divider { height: 1px; background: rgba(0,0,0,0.08); margin: 2rem 0; }
+
+/* POLICY TABLE */
+.policy-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.08); margin: 2.5rem 0; }
+.policy-row { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; background: #fff; }
+.policy-row.header { background: var(--bg-deep); }
+.policy-cell { padding: 1.1rem 1.25rem; font-size: 0.88rem; color: var(--text-dark-muted); line-height: 1.5; border-right: 1px solid rgba(0,0,0,0.06); }
+.policy-cell:last-child { border-right: none; }
+.policy-row.header .policy-cell { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
+.policy-cell.green { color: #2d7a4a; font-weight: 400; }
+.policy-cell.amber { color: #b06820; font-weight: 400; }
+.policy-cell.red { color: #a03030; font-weight: 400; }
+.policy-cell strong { color: var(--text-dark); font-weight: 500; display: block; margin-bottom: 0.15rem; }
+
+.info-block { background: #fff; border: 1px solid rgba(0,0,0,0.08); border-left: 3px solid var(--accent); padding: 1.5rem 2rem; margin: 2rem 0; }
+.info-block p { margin: 0; font-size: 0.88rem; }
+
+footer { background: var(--bg-deep); border-top: 1px solid var(--border-warm); padding: 2.5rem 3rem; text-align: center; }
+.footer-copy { font-size: 0.75rem; color: var(--text-muted); opacity: 0.6; }
+.legal-nav { display: flex; gap: 2rem; justify-content: center; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.legal-nav a { font-size: 0.75rem; color: var(--text-muted); text-decoration: none; letter-spacing: 0.08em; transition: color 0.3s; }
+.legal-nav a:hover { color: var(--text); }
+@media (max-width: 700px) { nav { padding: 1.25rem 1.5rem; } .page-header { padding: 8rem 1.5rem 4rem; } .doc-body { padding: 3rem 1.5rem 4rem; } .policy-row { grid-template-columns: 1fr; } .policy-row.header { display: none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">The <span>Vibe</span> Tribe</a>
+  <a href="index.html" class="nav-back">← Terug naar home</a>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-label">Juridisch</p>
+    <h1 class="page-title">Terugbetaalbeleid</h1>
+    <p class="page-meta">Versie 1.0 · Ingangsdatum: juni 2025 · Crealogica / The Vibe Tribe</p>
+  </div>
+</div>
+
+<div class="doc-body">
+
+  <h2>Standaard sessies</h2>
+  <p>Voor alle reguliere sessies (Stress & Anxiety Relief, Focus Enhancement, 40 Hz, The Cosmic Explorer, The King's Chamber, Sound Bath, Tailor Made Sessie, Duo-sessies) geldt het volgende annuleringsbeleid:</p>
+
+  <div class="policy-grid">
+    <div class="policy-row header">
+      <div class="policy-cell">Moment van annulering</div>
+      <div class="policy-cell">Restitutie</div>
+      <div class="policy-cell">Toelichting</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-cell"><strong>Meer dan 24 uur van tevoren</strong></div>
+      <div class="policy-cell green">100% restitutie</div>
+      <div class="policy-cell">Volledig bedrag wordt teruggestort binnen 5 werkdagen</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-cell"><strong>4 tot 24 uur van tevoren</strong></div>
+      <div class="policy-cell amber">50% restitutie</div>
+      <div class="policy-cell">De helft van het sessiebedrag wordt teruggestort</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-cell"><strong>Minder dan 4 uur van tevoren</strong></div>
+      <div class="policy-cell red">Geen restitutie</div>
+      <div class="policy-cell">Het sessiebedrag vervalt volledig</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-cell"><strong>No-show</strong></div>
+      <div class="policy-cell red">Geen restitutie</div>
+      <div class="policy-cell">Bij niet verschijnen zonder annulering vervalt het bedrag</div>
+    </div>
+  </div>
+
+  <h2>Guided Truffle Session</h2>
+  <p>Vanwege de uitgebreide voorbereiding die een Guided Truffle Session vereist, geldt een ruimere annuleringstermijn:</p>
+
+  <div class="policy-grid">
+    <div class="policy-row header">
+      <div class="policy-cell">Moment van annulering</div>
+      <div class="policy-cell">Restitutie</div>
+      <div class="policy-cell">Toelichting</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-cell"><strong>Meer dan 48 uur van tevoren</strong></div>
+      <div class="policy-cell green">100% restitutie</div>
+      <div class="policy-cell">Volledig bedrag wordt teruggestort binnen 5 werkdagen</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-cell"><strong>24 tot 48 uur van tevoren</strong></div>
+      <div class="policy-cell amber">50% restitutie</div>
+      <div class="policy-cell">De helft van het sessiebedrag wordt teruggestort</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-cell"><strong>Minder dan 24 uur van tevoren</strong></div>
+      <div class="policy-cell red">Geen restitutie</div>
+      <div class="policy-cell">Het sessiebedrag vervalt volledig</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-cell"><strong>No-show</strong></div>
+      <div class="policy-cell red">Geen restitutie</div>
+      <div class="policy-cell">Bij niet verschijnen zonder annulering vervalt het bedrag</div>
+    </div>
+  </div>
+
+  <h2>Hoe annuleer ik?</h2>
+  <p>Annuleren kan via de link in uw boekingsbevestiging (Cal.eu) of door een e-mail te sturen naar <a href="mailto:bart@crealogica.nl">bart@crealogica.nl</a>. Het tijdstip van annulering is het moment waarop de annulering door ons is ontvangen en bevestigd.</p>
+
+  <h2>Verzetten van een afspraak</h2>
+  <p>U kunt uw sessie gratis verzetten tot 24 uur van tevoren (48 uur voor de Guided Truffle Session) via de link in uw boekingsbevestiging. Verzetten binnen de genoemde termijnen wordt behandeld als annulering met de bijbehorende restitutieregelingen.</p>
+
+  <h2>Annulering door The Vibe Tribe</h2>
+  <p>In het uitzonderlijke geval dat wij een sessie moeten annuleren, ontvangt u altijd een volledige restitutie én de mogelijkheid om kosteloos te herboeken op een door u gewenst moment. Wij nemen in dat geval zo snel mogelijk contact met u op.</p>
+
+  <h2>Restitutie bij gezondheidsklachten</h2>
+  <div class="info-block">
+    <p>Bent u ziek op de dag van uw sessie? Neem dan contact op via <a href="mailto:bart@crealogica.nl">bart@crealogica.nl</a>. Wij kijken altijd naar de persoonlijke omstandigheden en helpen u graag een nieuwe afspraak te plannen, ook als u buiten de annuleringstermijn valt.</p>
+  </div>
+
+  <h2>Verwerking van restitutie</h2>
+  <p>Restituties worden verwerkt via de oorspronkelijke betaalmethode (Stripe) en zijn doorgaans binnen 5 werkdagen zichtbaar op uw rekening, afhankelijk van uw bank.</p>
+
+  <div class="divider"></div>
+  <p style="font-size: 0.82rem;">Vragen over uw boeking of restitutie? <a href="mailto:bart@crealogica.nl">bart@crealogica.nl</a></p>
+
+</div>
+
+<footer>
+  <div class="legal-nav">
+    <a href="privacy.html">Privacybeleid</a>
+    <a href="voorwaarden.html">Algemene voorwaarden</a>
+    <a href="terugbetaling.html">Terugbetaalbeleid</a>
+    <a href="toegankelijkheid.html">Toegankelijkheid</a>
+  </div>
+  <p class="footer-copy">© 2025 The Vibe Tribe · Crealogica · Amsterdam</p>
+</footer>
+</body>
+</html>

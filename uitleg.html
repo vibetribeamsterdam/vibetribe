@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoe het werkt | The Vibe Tribe</title>
+<meta name="description" content="Ontdek hoe vibro-akoestische therapie werkt, hoe een sessie verloopt en voor wie het geschikt is. Wetenschappelijk onderbouwd, muzikaal doordacht.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg-deep: #0e0b07; --bg-dark: #1a1309; --bg-card: #231a0e;
+  --bg-warm: #2e2212; --bg-cream: #faf6f0; --bg-light: #f5ede0;
+  --accent: #c8783c; --accent-light: #e8a870; --gold: #c9a252;
+  --gold-light: #e8c882; --text: #f0e6d4; --text-muted: #9e8c78;
+  --text-dark: #1a1309; --text-dark-muted: #6b5a48;
+  --border-warm: rgba(200,120,60,0.18);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--bg-deep); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 3rem; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to bottom, rgba(14,11,7,0.95) 0%, transparent 100%); backdrop-filter: blur(4px); }
+.nav-logo { font-family: 'Cormorant', serif; font-size: 1.4rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 0.55rem 1.5rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+.nav-cta:hover { background: var(--accent); color: var(--bg-deep); }
+
+/* HERO */
+.page-hero { min-height: 60vh; display: flex; align-items: flex-end; background: var(--bg-deep); padding: 0 3rem 5rem; position: relative; overflow: hidden; }
+.hero-glow { position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 500px; background: radial-gradient(ellipse, rgba(200,120,60,0.06) 0%, transparent 70%); pointer-events: none; }
+.page-hero-content { position: relative; z-index: 2; max-width: 800px; animation: fadeUp 0.9s ease both; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+.breadcrumb { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 0.6rem; opacity: 0.4; }
+.page-label { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.page-title { font-family: 'Cormorant', serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 400; line-height: 1.05; color: var(--text); margin-bottom: 1.25rem; }
+.page-title em { font-style: italic; color: var(--accent-light); }
+.page-subtitle { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; line-height: 1.8; }
+
+/* QUICK NAV */
+.quick-nav { background: var(--bg-dark); border-bottom: 1px solid var(--border-warm); }
+.quick-nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 3rem; display: flex; gap: 0; overflow-x: auto; }
+.quick-nav-inner::-webkit-scrollbar { display: none; }
+.qn-item { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; padding: 1.25rem 1.5rem; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.3s; }
+.qn-item:hover { color: var(--text); border-bottom-color: var(--accent); }
+
+/* SECTIONS */
+.section { max-width: 1100px; margin: 0 auto; padding: 6rem 3rem; }
+.section-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.section-title { font-family: 'Cormorant', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--text); margin-bottom: 1.75rem; line-height: 1.2; }
+.section-title em { font-style: italic; color: var(--accent-light); }
+.body-text { font-size: 0.97rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.25rem; }
+.body-text:last-of-type { margin-bottom: 0; }
+
+.divider { height: 1px; background: linear-gradient(to right, transparent, var(--border-warm), transparent); }
+
+/* TWO-COL */
+.two-col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 6rem; align-items: start; }
+.two-col-reverse { grid-template-columns: 1fr 1.1fr; }
+
+/* VAT VISUAL */
+.vat-visual { position: relative; }
+.vat-card { background: var(--bg-card); border: 1px solid var(--border-warm); padding: 2.5rem; }
+.vat-card-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+.vat-facts { display: flex; flex-direction: column; gap: 1.25rem; }
+.vat-fact { display: flex; gap: 1.25rem; align-items: flex-start; }
+.vat-fact-num { font-family: 'Cormorant', serif; font-size: 2rem; font-weight: 400; color: var(--accent); line-height: 1; min-width: 3rem; }
+.vat-fact-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-top: 0.25rem; }
+.vat-fact-text strong { color: var(--text); font-weight: 400; display: block; margin-bottom: 0.2rem; font-size: 0.9rem; }
+
+/* HOW SECTION */
+.how-bg { background: var(--bg-warm); }
+.steps-visual { display: flex; flex-direction: column; gap: 0; }
+.step-row { display: grid; grid-template-columns: 80px 1fr; gap: 2rem; padding: 2.5rem 0; border-bottom: 1px solid var(--border-warm); align-items: start; }
+.step-row:last-child { border-bottom: none; }
+.step-num { font-family: 'Cormorant', serif; font-size: 3.5rem; font-weight: 300; color: rgba(200,120,60,0.2); line-height: 1; text-align: center; }
+.step-content {}
+.step-title { font-family: 'Cormorant', serif; font-size: 1.4rem; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
+.step-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
+
+/* SOUNDBED VISUAL */
+.soundbed-card { background: var(--bg-deep); border: 1px solid var(--border-warm); padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.sb-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border-warm); }
+.sb-row:last-child { border-bottom: none; padding-bottom: 0; }
+.sb-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+.sb-value { font-family: 'Cormorant', serif; font-size: 1.3rem; color: var(--text); }
+
+/* VOOR WIE */
+.light-bg { background: var(--bg-cream); }
+.light-bg .section-title { color: var(--text-dark); }
+.light-bg .section-label { color: var(--accent); }
+.light-bg .body-text { color: var(--text-dark-muted); }
+.conditions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 0; }
+.condition-item { background: #fff; border: 1px solid rgba(0,0,0,0.08); padding: 1.5rem; border-top: 3px solid var(--accent); }
+.condition-title { font-family: 'Cormorant', serif; font-size: 1.1rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.4rem; }
+.condition-text { font-size: 0.82rem; color: var(--text-dark-muted); line-height: 1.6; }
+
+/* FREQUENCIES */
+.freq-bg { background: var(--bg-dark); }
+.freq-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border-warm); border: 1px solid var(--border-warm); margin-top: 3rem; }
+.freq-item { background: var(--bg-dark); padding: 2rem 1.5rem; text-align: center; }
+.freq-symbol { font-family: 'Cormorant', serif; font-size: 2.5rem; font-weight: 300; color: var(--accent-light); line-height: 1; margin-bottom: 0.5rem; }
+.freq-name { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); margin-bottom: 0.3rem; }
+.freq-hz { font-size: 0.75rem; color: var(--gold); margin-bottom: 0.75rem; }
+.freq-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 0; margin-top: 2.5rem; }
+.faq-item { border-bottom: 1px solid var(--border-warm); }
+.faq-item:first-child { border-top: 1px solid var(--border-warm); }
+.faq-q { padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+.faq-q-text { font-family: 'Cormorant', serif; font-size: 1.15rem; font-weight: 500; color: var(--text); }
+.faq-toggle { font-size: 1.4rem; color: var(--accent); transition: transform 0.3s; line-height: 1; }
+.faq-a { font-size: 0.88rem; color: var(--text-muted); line-height: 1.9; padding-bottom: 1.5rem; display: none; max-width: 680px; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+/* CTA */
+.cta-strip { background: var(--accent); padding: 6rem 3rem; text-align: center; }
+.cta-title { font-family: 'Cormorant', serif; font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: #fff; margin-bottom: 1rem; line-height: 1.1; }
+.cta-sub { font-size: 0.95rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+.btn-white { background: #fff; color: var(--accent); padding: 1rem 2.5rem; border: none; font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; margin: 0 0.5rem; }
+.btn-white:hover { background: var(--bg-deep); color: #fff; }
+.btn-white-ghost { background: transparent; color: #fff; padding: 1rem 2.5rem; border: 1px solid rgba(255,255,255,0.5); font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; margin: 0 0.5rem; }
+.btn-white-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+/* FOOTER */
+footer { background: var(--bg-deep); border-top: 1px solid var(--border-warm); padding: 4rem 3rem 2.5rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+.footer-brand-name { font-family: 'Cormorant', serif; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+.footer-brand-name span { color: var(--accent); }
+.footer-tagline { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.25rem; }
+.footer-contact { font-size: 0.8rem; color: var(--text-muted); line-height: 1.9; }
+.footer-col-title { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links a { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--text); }
+.footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid var(--border-warm); }
+.footer-copy { font-size: 0.75rem; color: var(--text-muted); opacity: 0.6; }
+
+@media (max-width: 900px) {
+  nav { padding: 1.25rem 1.5rem; }
+  .nav-links { display: none; }
+  .page-hero { padding: 0 1.5rem 4rem; }
+  .section { padding: 4rem 1.5rem; }
+  .two-col, .two-col-reverse { grid-template-columns: 1fr; gap: 3rem; }
+  .conditions-grid { grid-template-columns: 1fr 1fr; }
+  .freq-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">The <span>Vibe</span> Tribe</a>
+  <ul class="nav-links">
+    <li><a href="uitleg.html" style="color:var(--text)">Hoe het werkt</a></li>
+    <li><a href="index.html#sessies">Sessies</a></li>
+    <li><a href="achtergrond.html">Achtergrond info</a></li>
+    <li><a href="index.html#over">Over ons</a></li>
+  </ul>
+  <a href="index.html#sessies" class="nav-cta">Boek een sessie</a>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-glow"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span>Hoe het werkt
+    </div>
+    <p class="page-label">Uitleg</p>
+    <h1 class="page-title">Ontspan dieper<br>dan <em>ooit</em></h1>
+    <p class="page-subtitle">Bereik heilzame ontspanning dankzij de unieke kracht van vibro-akoestische therapie. Hier leggen we uit hoe het werkt, wat je kunt verwachten, en voor wie het geschikt is.</p>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<div class="quick-nav">
+  <div class="quick-nav-inner">
+    <a href="#wat-is-het" class="qn-item">Wat is het?</a>
+    <a href="#het-soundbed" class="qn-item">Het Soundbed</a>
+    <a href="#hoe-verloopt" class="qn-item">Hoe verloopt een sessie?</a>
+    <a href="#voor-wie" class="qn-item">Voor wie?</a>
+    <a href="#frequenties" class="qn-item">Hersengolven</a>
+    <a href="#faq" class="qn-item">Veelgestelde vragen</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WAT IS HET -->
+<div style="background: var(--bg-dark);" id="wat-is-het">
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <p class="section-label">Wat is het?</p>
+        <h2 class="section-title">Geluid dat je niet hoort,<br><em>maar wel voelt</em></h2>
+        <p class="body-text">Vibro-akoestische therapie (VAT) combineert laagfrequente geluidstrillingen met gerichte muziek en binaural beats om het lichaam en de geest in een herstellende staat te brengen.</p>
+        <p class="body-text">Het VibeTribe Soundbed is uitgerust met speciale transducers die geluid omzetten in diepe, voelbare trillingen. Deze trillingen zijn zo laag van frequentie dat je ze niet met je oren kunt horen — maar je hele lichaam voelt ze wel. Ze dringen direct door in je spieren, botten en zenuwstelsel.</p>
+        <p class="body-text">Het resultaat: je parasympathische zenuwstelsel — het systeem verantwoordelijk voor rust en herstel — wordt direct geactiveerd. Spieren ontspannen, hersengolven kalmeren, de constante stroom van gedachten stopt. Vergelijkbaar met diepe meditatie, maar zonder de leercurve van jarenlange oefening.</p>
+        <p class="body-text">De positieve effecten zijn wetenschappelijk aangetoond in peer-reviewed onderzoek, onder andere bij stress, angst, slaapproblemen, focus, AD(H)D en zelfs neurodegeneratieve aandoeningen.</p>
+      </div>
+      <div>
+        <div class="vat-card">
+          <p class="vat-card-label">Wetenschappelijk aangetoond bij</p>
+          <div class="vat-facts">
+            <div class="vat-fact">
+              <span class="vat-fact-num">01</span>
+              <div class="vat-fact-text"><strong>Stress & angst</strong>Direct meetbare verlaging van cortisolniveaus en hartritme na een sessie van 20–30 minuten.</div>
+            </div>
+            <div class="vat-fact">
+              <span class="vat-fact-num">02</span>
+              <div class="vat-fact-text"><strong>Slaapkwaliteit</strong>Verbeterde slaapdiepte en inslaapduur, met name bij chronische slaapproblemen en insomnia.</div>
+            </div>
+            <div class="vat-fact">
+              <span class="vat-fact-num">03</span>
+              <div class="vat-fact-text"><strong>Cognitieve functies</strong>Verbeterd werkgeheugen, aandacht en neurale synchronisatie bij regelmatig gebruik.</div>
+            </div>
+            <div class="vat-fact">
+              <span class="vat-fact-num">04</span>
+              <div class="vat-fact-text"><strong>Pijnverlichting</strong>Vermindering van spierspanning en chronische pijn door direct effect op het zenuwstelsel.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- HET SOUNDBED -->
+<div style="background: var(--bg-deep);" id="het-soundbed">
+  <div class="section">
+    <div class="two-col two-col-reverse">
+      <div>
+        <div class="soundbed-card">
+          <p class="vat-card-label" style="margin-bottom:0;">Het VibeTribe Soundbed</p>
+          <div class="sb-row">
+            <span class="sb-label">Technologie</span>
+            <span class="sb-value">Vibro-akoestische transducers</span>
+          </div>
+          <div class="sb-row">
+            <span class="sb-label">Frequentiebereik</span>
+            <span class="sb-value">20 – 120 Hz (voelbaar)</span>
+          </div>
+          <div class="sb-row">
+            <span class="sb-label">Audio input</span>
+            <span class="sb-value">Binaural beats, solfeggio, soundscapes</span>
+          </div>
+          <div class="sb-row">
+            <span class="sb-label">Sessieduur</span>
+            <span class="sb-value">Vanaf 22 minuten effectief</span>
+          </div>
+          <div class="sb-row">
+            <span class="sb-label">Capaciteit</span>
+            <span class="sb-value">Solo of duo (2 soundbeds)</span>
+          </div>
+          <div class="sb-row">
+            <span class="sb-label">Bijwerkingen</span>
+            <span class="sb-value">Geen — veilig en niet-invasief</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="section-label">Het Soundbed</p>
+        <h2 class="section-title">Een instrument voor<br><em>lichaam en geest</em></h2>
+        <p class="body-text">Het Soundbed is geen gewone massagetafel. Het is een precisie-instrument dat geluid omzet in fysiek voelbare trillingen via ingebouwde transducers — vergelijkbaar met de subwoofers van een high-end audiosysteem, maar dan direct onder je lichaam.</p>
+        <p class="body-text">Terwijl je ligt, draag je een koptelefoon die binaurale beats en zorgvuldig samengestelde soundscapes levert. De combinatie van wat je hoort en wat je voelt creëert een dubbel effect: je hersengolven worden gestuurd via geluid, terwijl je zenuwstelsel direct wordt aangesproken via de trillingen.</p>
+        <p class="body-text">Al na 22 minuten is er aantoonbaar effect. De meeste sessies duren 30 minuten — genoeg voor een diepgaande reset zonder dat het veel tijd kost.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- HOE VERLOOPT EEN SESSIE -->
+<div class="how-bg" id="hoe-verloopt">
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <p class="section-label">Hoe verloopt een sessie?</p>
+        <h2 class="section-title">Stap voor stap<br><em>naar diepe rust</em></h2>
+        <p class="body-text">Een sessie bij the Vibe Tribe verloopt altijd rustig, persoonlijk en zonder haast. Je hoeft niets te doen, niets te leren en niets te beheersen — je laat het gewoon toe.</p>
+      </div>
+      <div>
+        <div class="steps-visual">
+          <div class="step-row">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3 class="step-title">Ontvangst & intake</h3>
+              <p class="step-text">Je wordt ontvangen in een rustige, sfeervolle omgeving. We nemen even de tijd om te bespreken wat je zoekt, hoe je je voelt en welke sessie het beste bij je past. Geen lange formulieren — gewoon een kort, persoonlijk gesprek.</p>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3 class="step-title">Installatie</h3>
+              <p class="step-text">Je gaat comfortabel liggen op het Soundbed. Je krijgt een koptelefoon opgezet en, als je wilt, een zacht oogmasker voor volledige duisternis. De begeleider stelt de juiste frequenties in op basis van jouw sessiekeuze.</p>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3 class="step-title">De sessie</h3>
+              <p class="step-text">De begeleider verlaat de ruimte zodat je volledig kunt opgaan in de ervaring. Geluid en trillingen beginnen. Laat het gewoon gebeuren — er is niets wat je moet doen of denken. De meeste mensen zakken binnen een paar minuten weg in een diepe staat van ontspanning.</p>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3 class="step-title">Landen & nazorg</h3>
+              <p class="step-text">Na afloop neem je rustig de tijd om terug te komen. Veel mensen liggen nog even stil en genieten van de nawerking. Er is altijd ruimte voor een kort nawoord als je iets wilt delen of vragen hebt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- VOOR WIE -->
+<section class="light-bg" id="voor-wie">
+  <div class="section">
+    <p class="section-label">Voor wie?</p>
+    <h2 class="section-title" style="color:var(--text-dark);">Iedereen kan ervan <em style="color:var(--accent);">profiteren</em></h2>
+    <p class="body-text">Vibro-akoestische therapie is veilig, pijnloos en volledig natuurlijk. Er is geen speciale voorbereiding nodig en geen contra-indicaties voor gezonde volwassenen. Het werkt voor mensen die al bekend zijn met meditatie én voor mensen die er nooit in geslaagd zijn te mediteren.</p>
+    <div class="conditions-grid" style="margin-top: 2.5rem;">
+      <div class="condition-item">
+        <h3 class="condition-title">Stress & burnout</h3>
+        <p class="condition-text">Directe verlaging van stresshormonen. Bijzonder effectief als tijdelijk houvast bij overbelasting of als preventief onderhoud.</p>
+      </div>
+      <div class="condition-item">
+        <h3 class="condition-title">Slaapproblemen</h3>
+        <p class="condition-text">Delta-frequenties ondersteunen de overgang naar diepe slaap. Veel mensen slapen die nacht merkbaar beter na een sessie.</p>
+      </div>
+      <div class="condition-item">
+        <h3 class="condition-title">Focus & AD(H)D</h3>
+        <p class="condition-text">Gamma- en alpha-frequenties verbeteren aandacht, werkgeheugen en concentratie — ook bij mensen met aandachtsstoornissen.</p>
+      </div>
+      <div class="condition-item">
+        <h3 class="condition-title">Angst & onrust</h3>
+        <p class="condition-text">Het parasympathische zenuwstelsel wordt direct geactiveerd. Effectief als aanvulling op therapie of medicatie, nooit als vervanging.</p>
+      </div>
+      <div class="condition-item">
+        <h3 class="condition-title">Meditatie & spiritualiteit</h3>
+        <p class="condition-text">Voor ervaren mediteerders: een versneller om diepere staten te bereiken. Voor beginners: een directe ingang zonder leercurve.</p>
+      </div>
+      <div class="condition-item">
+        <h3 class="condition-title">Recreatieve ontspanning</h3>
+        <p class="condition-text">Geen klacht nodig. Gewoon genieten van een diepe, bijzondere ervaring die je energiek en helder achterlaat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FREQUENTIES -->
+<div class="freq-bg" id="frequenties">
+  <div class="section">
+    <p class="section-label">De wetenschap achter het geluid</p>
+    <h2 class="section-title">Hersengolven &<br><em>binaural beats</em></h2>
+    <p class="body-text" style="max-width: 680px;">Je brein werkt met elektrische signalen die golven vormen — hersengolven. Elke bewustzijnsstaat heeft zijn eigen frequentie. Met binaural beats kun je deze hersengolven bewust beïnvloeden: door twee iets verschillende tonen in elk oor te laten horen, creëert je brein een derde virtuele toon die je naar de gewenste staat 'trekt'.</p>
+    <div class="freq-grid">
+      <div class="freq-item">
+        <div class="freq-symbol">γ</div>
+        <div class="freq-name">Gamma</div>
+        <div class="freq-hz">30–100 Hz</div>
+        <div class="freq-desc">Hoog-bewuste cognitie, geheugen, neurale synchronisatie. Basis van de 40 Hz sessie.</div>
+      </div>
+      <div class="freq-item">
+        <div class="freq-symbol">β</div>
+        <div class="freq-name">Beta</div>
+        <div class="freq-hz">13–30 Hz</div>
+        <div class="freq-desc">Actief en alert. Ook geassocieerd met stress en piekeren — de staat waarin de meeste mensen binnenkomen.</div>
+      </div>
+      <div class="freq-item">
+        <div class="freq-symbol">α</div>
+        <div class="freq-name">Alpha</div>
+        <div class="freq-hz">8–13 Hz</div>
+        <div class="freq-desc">Kalme focus, creativiteit en ontspanning. De staat die hoort bij flow en rustige productiviteit.</div>
+      </div>
+      <div class="freq-item">
+        <div class="freq-symbol">θ</div>
+        <div class="freq-name">Theta</div>
+        <div class="freq-hz">4–8 Hz</div>
+        <div class="freq-desc">Diepe meditatie, droomachtige staat, inspiratie. Waar de meeste ontspanningssessies je naartoe brengen.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<div style="background: var(--bg-deep);" id="faq">
+  <div class="section">
+    <p class="section-label">Veelgestelde vragen</p>
+    <h2 class="section-title">Alles wat je<br><em>wilt weten</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Is het pijnlijk of ongemakkelijk?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Nee, helemaal niet. De trillingen zijn laagfrequent en worden als aangenaam en warm ervaren — vergelijkbaar met een diepe massage, maar dan van binnenuit. Veel mensen vinden het verrassend prettig en willen niet meer opstaan.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Moet ik kunnen mediteren of yoga kunnen doen?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Absoluut niet. Dat is juist één van de grote voordelen van vibro-akoestische therapie: het werkt ook als je nooit hebt gemediteerd en moeite hebt om je gedachten te stillen. De trillingen nemen het werk over — jij hoeft alleen maar te liggen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Hoe snel merk ik effect?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">De meeste mensen merken al tijdens de sessie een verschil — spieren ontspannen, gedachten kalmeren, het lichaam voelt zwaarder en rustiger. Na afloop ervaren velen een duidelijke helderheid en rust. Bij regelmatig gebruik kunnen effecten op slaap, stress en focus al na een paar sessies meetbaar worden.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Is het veilig? Zijn er contra-indicaties?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Voor gezonde volwassenen is vibro-akoestische therapie volledig veilig en niet-invasief. Er zijn geen bekende bijwerkingen. We raden aan om ons te informeren als je zwanger bent, een pacemaker draagt, epilepsie hebt of recent een operatie hebt ondergaan. Bij twijfel altijd eerst een arts raadplegen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Hoe vaak moet ik een sessie doen?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Één sessie geeft al merkbaar resultaat. Voor structurele effecten op slaap, stress of focus adviseren we een reeks van vier tot acht sessies over twee tot vier weken. Na een eerste sessie bepalen we samen wat voor jou het meest zinvol is.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Welke sessie past het beste bij mij?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Dat hangt af van wat je zoekt. Stress en ontspanning? Kies Stress & Anxiety Relief. Focus en prestatie? Focus Enhancement of 40 Hz. Muzikale beleving en avontuur? The Cosmic Explorer. Weet je het niet zeker? Plan dan een vrijblijvende Tailor Made intake en we bepalen samen de beste aanpak.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <h2 class="cta-title">Klaar om het<br>zelf te ervaren?</h2>
+  <p class="cta-sub">Geen verdere voorbereiding nodig. Kom gewoon langs en ontdek wat vibro-akoestische therapie voor jou kan betekenen.</p>
+  <div>
+    <a href="index.html#sessies" class="btn-white">Bekijk sessies</a>
+    <a href="sessies/tailor-made-sessie.html" class="btn-white-ghost">Plan een intake</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">The <span>Vibe</span> Tribe</div>
+      <p class="footer-tagline">Unieke vibro-akoestische sessies in Amsterdam. Wetenschappelijk onderbouwd, muzikaal doordacht.</p>
+      <div class="footer-contact">Atlantisplein · Amsterdam<br>info@thevibetribe.nl</div>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigatie</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="uitleg.html">Hoe het werkt</a></li>
+        <li><a href="index.html#sessies">Sessies</a></li>
+        <li><a href="index.html#over">Over ons</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Info</p>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacybeleid</a></li>
+        <li><a href="voorwaarden.html">Algemene voorwaarden</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 The Vibe Tribe · Amsterdam</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
