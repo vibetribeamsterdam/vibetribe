@@ -78,6 +78,21 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 
 /* HOW SECTION */
 .how-bg { background: var(--bg-warm); }
+
+.steps-full { display: flex; flex-direction: column; gap: 0; }
+.step-full { display: grid; grid-template-columns: 80px 1fr 480px; gap: 0; align-items: stretch; border-bottom: 1px solid var(--border-warm); }
+.step-full:last-child { border-bottom: none; }
+.step-full-reverse { direction: rtl; }
+.step-full-reverse > * { direction: ltr; }
+.step-full-num { font-family: 'Cormorant', serif; font-size: 5rem; font-weight: 300; color: rgba(200,120,60,0.15); line-height: 1; display: flex; align-items: center; justify-content: center; padding: 2.5rem 1rem; }
+.step-full-content { padding: 2.5rem 3rem 2.5rem 1rem; display: flex; flex-direction: column; justify-content: center; }
+.step-full-img { overflow: hidden; min-height: 280px; }
+.step-full-img img { width: 100%; height: 100%; object-fit: cover; object-position: center right; display: block; opacity: 0.9; }
+@media (max-width: 900px) {
+  .step-full { grid-template-columns: 60px 1fr; }
+  .step-full-img { display: none; }
+  .step-full-reverse { direction: ltr; }
+}
 .steps-visual { display: flex; flex-direction: column; gap: 0; }
 .step-row { display: grid; grid-template-columns: 80px 1fr; gap: 2rem; padding: 2.5rem 0; border-bottom: 1px solid var(--border-warm); align-items: start; }
 .step-row.has-img { grid-template-columns: 80px 1fr 280px; align-items: center; }
@@ -293,47 +308,57 @@ footer { background: var(--bg-deep); border-top: 1px solid var(--border-warm); p
 <!-- HOE VERLOOPT EEN SESSIE -->
 <div class="how-bg" id="hoe-verloopt">
   <div class="section">
-    <div class="two-col">
-      <div>
-        <p class="section-label">Hoe verloopt een sessie?</p>
-        <h2 class="section-title">Stap voor stap<br><em>naar diepe rust</em></h2>
-        <p class="body-text">Een sessie bij the Vibe Tribe verloopt altijd rustig, persoonlijk en zonder haast. Je hoeft niets te doen, niets te leren en niets te beheersen — je laat het gewoon toe.</p>
-      </div>
-      <div>
-        <div class="steps-visual">
-          <div class="step-row has-img">
-            <div class="step-num">01</div>
-            <div class="step-content">
-              <h3 class="step-title">Ontvangst & intake</h3>
-              <p class="step-text">Je wordt ontvangen in een rustige, sfeervolle omgeving. We nemen even de tijd om te bespreken wat je zoekt, hoe je je voelt en welke sessie het beste bij je past. Geen lange formulieren — gewoon een kort, persoonlijk gesprek.</p>
-            </div>
-            <img src="images/inteek.png" alt="Intake gesprek bij The Vibe Tribe" class="step-img">
-          </div>
-          <div class="step-row">
-            <div class="step-num">02</div>
-            <div class="step-content">
-              <h3 class="step-title">Installatie</h3>
-              <p class="step-text">Je gaat comfortabel liggen op het Soundbed. Je krijgt een koptelefoon opgezet en, als je wilt, een zacht oogmasker voor volledige duisternis. De begeleider stelt de juiste frequenties in op basis van jouw sessiekeuze.</p>
-            </div>
-          </div>
-          <div class="step-row has-img">
-            <div class="step-num">03</div>
-            <div class="step-content">
-              <h3 class="step-title">De sessie</h3>
-              <p class="step-text">De begeleider verlaat de ruimte zodat je volledig kunt opgaan in de ervaring. Geluid en trillingen beginnen. Laat het gewoon gebeuren — er is niets wat je moet doen of denken. De meeste mensen zakken binnen een paar minuten weg in een diepe staat van ontspanning.</p>
-            </div>
-            <img src="images/session.png" alt="Sessie op het VibeTribe Soundbed" class="step-img">
-          </div>
-          <div class="step-row has-img">
-            <div class="step-num">04</div>
-            <div class="step-content">
-              <h3 class="step-title">Landen & nazorg</h3>
-              <p class="step-text">Na afloop neem je rustig de tijd om terug te komen. Veel mensen liggen nog even stil en genieten van de nawerking. Er is altijd ruimte voor een kort nawoord als je iets wilt delen of vragen hebt.</p>
-            </div>
-            <img src="images/nazorg.png" alt="Nazorg — landen na de sessie" class="step-img">
-          </div>
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <p class="section-label">Hoe verloopt een sessie?</p>
+      <h2 class="section-title">Stap voor stap<br><em>naar diepe rust</em></h2>
+      <p class="body-text" style="max-width:580px;margin:0 auto;">Een sessie bij The Vibe Tribe verloopt altijd rustig, persoonlijk en zonder haast. Je hoeft niets te doen, niets te leren en niets te beheersen — je laat het gewoon toe.</p>
+    </div>
+    <div class="steps-full">
+
+      <div class="step-full">
+        <div class="step-full-num">01</div>
+        <div class="step-full-content">
+          <h3 class="step-title">Ontvangst & intake</h3>
+          <p class="step-text">Je wordt ontvangen in een rustige, sfeervolle omgeving. We nemen even de tijd om te bespreken wat je zoekt, hoe je je voelt en welke sessie het beste bij je past. Geen lange formulieren — gewoon een kort, persoonlijk gesprek.</p>
+        </div>
+        <div class="step-full-img">
+          <img src="images/inteek.png" alt="Intake gesprek bij The Vibe Tribe">
         </div>
       </div>
+
+      <div class="step-full step-full-reverse">
+        <div class="step-full-num">02</div>
+        <div class="step-full-content">
+          <h3 class="step-title">Installatie</h3>
+          <p class="step-text">Je gaat comfortabel liggen op het Soundbed. Je krijgt een koptelefoon opgezet en, als je wilt, een zacht oogmasker voor volledige duisternis. De begeleider stelt de juiste frequenties in op basis van jouw sessiekeuze.</p>
+        </div>
+        <div class="step-full-img">
+          <img src="images/session.png" alt="Klaarliggen op het VibeTribe Soundbed">
+        </div>
+      </div>
+
+      <div class="step-full">
+        <div class="step-full-num">03</div>
+        <div class="step-full-content">
+          <h3 class="step-title">De sessie</h3>
+          <p class="step-text">De begeleider verlaat de ruimte zodat je volledig kunt opgaan in de ervaring. Geluid en trillingen beginnen. Laat het gewoon gebeuren — er is niets wat je moet doen of denken. De meeste mensen zakken binnen een paar minuten weg in een diepe staat van ontspanning.</p>
+        </div>
+        <div class="step-full-img">
+          <img src="images/session.png" alt="Sessie op het VibeTribe Soundbed">
+        </div>
+      </div>
+
+      <div class="step-full step-full-reverse">
+        <div class="step-full-num">04</div>
+        <div class="step-full-content">
+          <h3 class="step-title">Landen & nazorg</h3>
+          <p class="step-text">Na afloop neem je rustig de tijd om terug te komen. Veel mensen liggen nog even stil en genieten van de nawerking. Er is altijd ruimte voor een kort nawoord als je iets wilt delen of vragen hebt.</p>
+        </div>
+        <div class="step-full-img">
+          <img src="images/nazorg.png" alt="Nazorg en integratie na de sessie">
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
