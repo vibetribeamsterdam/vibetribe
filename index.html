@@ -113,6 +113,16 @@ nav {
   background: var(--bg-deep);
 }
 
+.hero-img {
+  position: absolute;
+  inset: 0;
+  background-image: url("images/cymatics-beta.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  mix-blend-mode: screen;
+}
+
 .hero-bg-img {
   position: absolute;
   inset: 0;
@@ -384,6 +394,16 @@ section { background: var(--bg-deep); }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   gap: 1.5rem;
+}
+
+.session-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center right;
+  margin-bottom: 1.25rem;
+  opacity: 0.85;
+  display: block;
 }
 
 .session-card {
@@ -930,6 +950,7 @@ footer {
 <!-- HERO -->
 <section class="hero">
     <div class="hero-bg-img"></div>
+  <div class="hero-img"></div>
   <div class="hero-canvas">
     <div class="wave-rings">
       <div class="ring"></div>
@@ -1084,6 +1105,7 @@ footer {
     <div class="sessions-grid">
 
       <div class="session-card">
+        <img src="images/session-stress.png" alt="Stress en Anxiety Relief" class="session-card-img">
         <span class="session-tag">Ontspanning</span>
         <h3 class="session-name"><a href="sessies/stress-anxiety-relief.html">Stress & Anxiety Relief</a></h3>
         <p class="session-tagline">30 minuten volledig loslaten</p>
@@ -1099,6 +1121,7 @@ footer {
       </div>
 
       <div class="session-card">
+        <img src="images/session-focus.png" alt="Focus Enhancement" class="session-card-img">
         <span class="session-tag">Focus</span>
         <h3 class="session-name"><a href="sessies/focus-enhancement.html">Focus Enhancement</a></h3>
         <p class="session-tagline">30 minuten laserscherpe concentratie</p>
@@ -1114,6 +1137,7 @@ footer {
       </div>
 
       <div class="session-card">
+        <img src="images/session-40hz.png" alt="40 Hz" class="session-card-img">
         <span class="session-tag">Cognitief</span>
         <h3 class="session-name"><a href="sessies/40-hz.html">40 Hz</a></h3>
         <p class="session-tagline">Waakzaam en alert</p>
@@ -1129,6 +1153,7 @@ footer {
       </div>
 
       <div class="session-card">
+        <img src="images/session-cosmic.png" alt="The Cosmic Explorer" class="session-card-img">
         <span class="session-tag">Beleving</span>
         <h3 class="session-name"><a href="sessies/the-cosmic-explorer.html">The Cosmic Explorer</a></h3>
         <p class="session-tagline">De oneindige diepte in</p>
@@ -1174,6 +1199,7 @@ footer {
       </div>
 
       <div class="session-card">
+        <img src="images/session-kings.png" alt="The King's Chamber" class="session-card-img">
         <span class="session-tag">Spiritueel</span>
         <h3 class="session-name"><a href="sessies/the-kings-chamber.html">The King's Chamber</a></h3>
         <p class="session-tagline">Heilige frequenties uit het oude Egypte</p>
@@ -1189,6 +1215,7 @@ footer {
       </div>
 
       <div class="session-card">
+        <img src="images/session-soundbath.png" alt="Sound Bath" class="session-card-img">
         <span class="session-tag">Live event</span>
         <h3 class="session-name"><a href="sessies/sound-bath.html">Sound Bath</a></h3>
         <p class="session-tagline">Badend in klank, samen</p>
@@ -1204,6 +1231,7 @@ footer {
       </div>
 
       <div class="session-card">
+        <img src="images/session-stress.png" alt="Tailor Made Sessie" class="session-card-img">
         <span class="session-tag">Op maat</span>
         <h3 class="session-name"><a href="sessies/tailor-made-sessie.html">Tailor Made Sessie</a></h3>
         <p class="session-tagline">Jouw sessie, jouw frequentie</p>
@@ -1220,6 +1248,7 @@ footer {
 
       <div class="session-card" style="border-color: rgba(201,162,82,0.3);">
         <span class="session-tag" style="border-color: rgba(201,162,82,0.5); color: var(--gold-light);">Transformatief</span>
+        <img src="images/session-truffle.png" alt="Guided Truffle Session" class="session-card-img">
         <h3 class="session-name"><a href="sessies/guided-truffle-session.html">Guided Truffle Session</a></h3>
         <p class="session-tagline">Een reis naar binnen, begeleid en veilig</p>
         <p class="session-desc">Vier uur begeleide transformatieve ervaring gecombineerd met het Soundbed. Van intentie-setting tot integratie. Uitsluitend op aanvraag en na intake.</p>

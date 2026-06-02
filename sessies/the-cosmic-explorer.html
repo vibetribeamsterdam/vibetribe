@@ -31,6 +31,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .nav-cta:hover { background: var(--accent); color: var(--bg-deep); }
 
 .session-hero { min-height: 65vh; display: flex; align-items: flex-end; background: var(--bg-deep); padding: 0 3rem 5rem; position: relative; overflow: hidden; }
+.session-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  opacity: 0.35;
+  mix-blend-mode: luminosity;
+}
 .hero-bg-rings { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; opacity: 0.12; pointer-events: none; }
 .hero-bg-ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 50%; border: 1px solid var(--accent); }
 .hero-content { position: relative; z-index: 2; max-width: 700px; animation: fadeUp 0.9s ease both; }
@@ -127,6 +135,8 @@ footer { background: var(--bg-deep); border-top: 1px solid var(--border-warm); p
 </nav>
 
 <section class="session-hero">
+  <div class="session-hero-bg" style="background-image:url('../images/session-cosmic.png');"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(14,11,7,0.95) 40%, rgba(14,11,7,0.3) 100%);z-index:1;"></div>
   <div class="hero-bg-rings"><div class="hero-bg-ring" style="width:150px;height:150px;"></div><div class="hero-bg-ring" style="width:280px;height:280px;"></div><div class="hero-bg-ring" style="width:420px;height:420px;"></div><div class="hero-bg-ring" style="width:560px;height:560px;"></div><div class="hero-bg-ring" style="width:700px;height:700px;"></div></div>
   <div class="hero-content">
     <div class="breadcrumb">
