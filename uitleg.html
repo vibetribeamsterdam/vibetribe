@@ -80,14 +80,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .how-bg { background: var(--bg-warm); }
 
 .steps-full { display: flex; flex-direction: column; gap: 0; }
-.step-full { display: grid; grid-template-columns: 80px 1fr 480px; gap: 0; align-items: stretch; border-bottom: 1px solid var(--border-warm); }
+.step-full { display: grid; grid-template-columns: 80px 1fr 420px; gap: 0; align-items: center; border-bottom: 1px solid var(--border-warm); }
 .step-full:last-child { border-bottom: none; }
 .step-full-reverse { direction: rtl; }
 .step-full-reverse > * { direction: ltr; }
 .step-full-num { font-family: 'Cormorant', serif; font-size: 5rem; font-weight: 300; color: rgba(200,120,60,0.15); line-height: 1; display: flex; align-items: center; justify-content: center; padding: 2.5rem 1rem; }
 .step-full-content { padding: 2.5rem 3rem 2.5rem 1rem; display: flex; flex-direction: column; justify-content: center; }
-.step-full-img { overflow: hidden; min-height: 280px; }
-.step-full-img img { width: 100%; height: 100%; object-fit: cover; object-position: center right; display: block; opacity: 0.9; }
+.step-full-img { overflow: hidden; }
+.step-full-img img { width: 100%; height: 320px; object-fit: cover; object-position: center; display: block; opacity: 0.9; }
 @media (max-width: 900px) {
   .step-full { grid-template-columns: 60px 1fr; }
   .step-full-img { display: none; }
